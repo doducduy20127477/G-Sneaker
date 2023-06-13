@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./homepage.css";
 import Logo from "../../assets/nike.png";
+import CheckIcon from "../../assets/check.png";
 import Database from "../../data/shoes.json";
 
 const Homepage = () => {
@@ -120,7 +121,7 @@ const Homepage = () => {
 										<div className="add-to-cart">
 											<p className="price">{currencyFilter(prod.price)}</p>
 											{isItemInCart(prod) ? (
-												"CHECKED"
+												<img src={CheckIcon} />
 											) : (
 												<button
 													className="add-button"
