@@ -1,37 +1,105 @@
-.card {
+.cardItem {
 	display: flex;
-	width: 400px;
-	border-radius: 8px;
-	overflow: hidden;
-	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+	padding: 20px 0;
 }
 
-.card-image {
-	width: 150px;
-	height: 150px;
-	object-fit: cover;
+.cardItemLeft {
+	flex: 0;
 }
 
-.card-content {
-	padding: 16px;
+.cardItemImage {
+	background-color: rgb(225, 231, 237);
+	width: 90px;
+	height: 90px;
+	border-radius: 100%;
+	background-color: #eee;
+	margin-right: 34px;
 }
 
-.card-title {
-	margin-top: 0;
-	margin-bottom: 8px;
+.cardItemImageBlock img {
+	display: block;
+	width: 140%;
+	transform: rotate(-28deg) translateY(-40px);
+	filter: drop-shadow(0 30px 20px rgba(0, 0, 0, .2));
 }
 
-.card-description {
-	margin-top: 0;
+img {
+	overflow-clip-margin: content-box;
+	overflow: clip;
+}
+
+.cardItemRight {
+	flex: 1;
+}
+
+.cartItemName {
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 1.5;
+	margin-bottom: 10px;
+}
+
+.cartItemPrice {
+	font-size: 20px;
+	font-weight: 700;
 	margin-bottom: 16px;
 }
 
-.card-button {
-	background-color: #007bff;
-	color: #fff;
-	border: none;
-	padding: 8px 16px;
-	border-radius: 4px;
+.cartItemActions,
+.cartItemCount {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.cartItemCount {
+	flex: 1;
+}
+
+.App_cartItemCountButton_Gr8VG {
 	cursor: pointer;
+	width: 28px;
+	height: 28px;
+	line-height: 28px;
+	border-radius: 100%;
+	background-color: #eee;
 	font-size: 16px;
+	font-weight: 700;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: .2s;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.cartItemCountNumber {
+	font-size: 14px;
+	margin: 0 8px;
+	width: 20px;
+	text-align: center;
+}
+
+.cartItemRemove {
+	width: 28px;
+	height: 28px;
+	cursor: pointer;
+	transition: all .25s ease;
+	border-radius: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #f6c90e;
+	transition: .2s;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.cartItemRemove img {
+	width: 16px;
+	height: 16px;
 }

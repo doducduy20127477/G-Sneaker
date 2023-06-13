@@ -1,7 +1,7 @@
 import React from "react";
 // import axios from "axios";
 import "./App.css";
-//import Cart from "./components/Cart/Cart";
+import Cart from "./components/Cart/Cart";
 import Homepage from "./pages/Homepage/Homepage";
 
 function App() {
