@@ -1,20 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-}
 
 
 body {
+	color: #303841;
 	font-family: "Rubik", sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font-size: 16px;
-	padding: 3rem;
-	display: flex;
-	justify-content: center;
+	margin: 0;
+	/* -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale; */
 }
 
 #app {
@@ -41,8 +34,57 @@ h1 {
 	margin: 0 auto;
 }
 
-.grid .col-sx,
-.grid .col-dx {
+.grid:before {
+	content: "";
+	display: block;
+	position: fixed;
+	width: 300%;
+	height: 100%;
+	top: 50%;
+	left: 50%;
+	border-radius: 100%;
+	transform: translateX(-50%) skewY(-8deg);
+	background-color: #f6c90e;
+	z-index: -1;
+	-webkit-animation: App_wave_3CtRm 8s ease-in-out infinite alternate;
+	animation: App_wave_3CtRm 8s ease-in-out infinite alternate
+}
+
+@-webkit-keyframes App_wave_3CtRm {
+	0% {
+		transform: translateX(-50%) skew(0deg, -8deg)
+	}
+
+	to {
+		transform: translateX(-30%) skew(8deg, -4deg)
+	}
+}
+
+@keyframes App_wave_3CtRm {
+	0% {
+		transform: translateX(-50%) skew(0deg, -8deg)
+	}
+
+	to {
+		transform: translateX(-30%) skew(8deg, -4deg)
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.grid {
+		height: auto;
+		flex-direction: column
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.App_mainContent_12BYb {
+		padding: 0 8px
+	}
+}
+
+.col-sx,
+.col-dx {
 	background-color: #fff;
 	box-sizing: border-box;
 	width: 360px;
