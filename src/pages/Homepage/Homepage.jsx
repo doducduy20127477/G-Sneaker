@@ -12,10 +12,23 @@ const Homepage = () => {
 	}, []);
 
 	const [cartItems, setCartItems] = useState([]);
+	useEffect(() => {
+		const existingCart = localStorage.getItem("cart");
+		setCartItems(existingCart ? JSON.parse(existingCart) : []);
+	}, []);
 	const [total, setTotal] = useState(0);
+	useEffect(() => {
+		// localStorage.clear();
+		const existingTotal = localStorage.getItem("total");
+		setTotal(existingTotal ? JSON.parse(existingTotal) : 0);
+	}, []);
 
 	const addToCart = (prod) => {
-		setTotal((prevTotal) => prevTotal + prod.price);
+		setTotal((prevTotal) => {
+			const resultTotal = prevTotal + prod.price;
+			localStorage.setItem("total", JSON.stringify(resultTotal));
+			return resultTotal;
+		});
 
 		let inCart = false;
 		const updatedCart = cartItems.map((item) => {
@@ -31,6 +44,7 @@ const Homepage = () => {
 				id: prod.id,
 				image: prod.image,
 				name: prod.name,
+				description: prod.description,
 				price: prod.price,
 				color: prod.color,
 				quantity: 1,
@@ -38,18 +52,30 @@ const Homepage = () => {
 		}
 
 		setCartItems(updatedCart);
+		localStorage.setItem("cart", JSON.stringify(updatedCart));
 	};
 
 	const removeFromCart = (item) => {
-		setTotal((prevTotal) => prevTotal - item.price * item.quantity);
+		setTotal((prevTotal) => {
+			const resultTotal = prevTotal - item.price * item.quantity;
+			localStorage.setItem("total", JSON.stringify(resultTotal));
+			return resultTotal;
+		});
+
 		setCartItems((prevCart) => {
 			const updatedCart = prevCart.filter((cartItem) => cartItem.id !== item.id);
+			localStorage.setItem("cart", JSON.stringify(updatedCart));
 			return updatedCart;
 		});
 	};
 
 	const add = (item) => {
-		setTotal((prevTotal) => prevTotal + item.price);
+		setTotal((prevTotal) => {
+			const resultTotal = prevTotal + item.price;
+			localStorage.setItem("total", JSON.stringify(resultTotal));
+			return resultTotal;
+		});
+
 		setCartItems((prevCart) => {
 			const updatedCart = prevCart.map((cartItem) => {
 				if (cartItem.id === item.id) {
@@ -57,12 +83,18 @@ const Homepage = () => {
 				}
 				return cartItem;
 			});
+			localStorage.setItem("cart", JSON.stringify(updatedCart));
 			return updatedCart;
 		});
 	};
 
 	const sub = (item) => {
-		setTotal((prevTotal) => prevTotal - item.price);
+		setTotal((prevTotal) => {
+			const resultTotal = prevTotal - item.price;
+			localStorage.setItem("total", JSON.stringify(resultTotal));
+			return resultTotal;
+		});
+
 		setCartItems((prevCart) => {
 			const updatedCart = prevCart
 				.map((cartItem) => {
@@ -75,6 +107,7 @@ const Homepage = () => {
 					return cartItem;
 				})
 				.filter((cartItem) => cartItem !== null);
+			localStorage.setItem("cart", JSON.stringify(updatedCart));
 			return updatedCart;
 		});
 	};
@@ -155,9 +188,7 @@ const Homepage = () => {
 							<div
 								key={"id-" + id}
 								className="total"
-							>
-								{/* {currencyFilter(total)} */}
-							</div>
+							></div>
 						))}
 						<div className="cart">
 							{cartItems.map((item) => (

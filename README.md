@@ -1,8 +1,8 @@
 # G-Sneaker
 
-### **[Live demo](https://gsneakerserver.onrender.com)**
+## **[Live demo](https://gsneakerserver.onrender.com)**
 
-### Completed:
+## Completed:
 
 -   Display all products in `Our Products` section:
     -   [x] Single product should have name, description, price, image and `Add To Cart` button.
@@ -14,12 +14,10 @@
     -   [x] User able to remove product from cart.
     -   [x] Show total price of all products in car. When user increase/decrease product's amount or remove product, total price should be re-calculate correctly.
     -   [x] When there are no products in cart, we should show `Your cart is empty` message.
+    -   [x] Products in cart should be persistent: When user visit the application, products are added before should be showed, user don't need to add products again.
+-   Deploy the application to onrender.
 
-### Not Completed:
-
--   Products in cart should be persistent: When user visit the application, products are added before should be showed, user don't need to add products again.
-
-### Guide to run:
+## Guide to run:
 
 -   Download source code in my repo
 -   `npm install`
