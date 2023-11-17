@@ -1,6 +1,7 @@
 # G-Sneaker
 
-## **[Live demo](https://gsneakerserver.onrender.com)**
+## **Deploy on GitHub Pages: https://gsneakerserver.onrender.com](https://doducduy20127477.github.io/G-Sneaker**  
+## **Deploy on OnRender: https://gsneakerserver.onrender.com**  
 
 ## Completed:
 
@@ -22,3 +23,7 @@
 -   Download source code in my repo
 -   `npm install`
 -   `npm start`
+  
+## Guide to run:
+
+![mainScreen](./overview/mainScreen.png) 
