@@ -1,6 +1,6 @@
 # G-Sneaker
 
-#### **Deploy on GitHub Pages: https://gsneakerserver.onrender.com](https://doducduy20127477.github.io/G-Sneaker**  
+#### **Deploy on GitHub Pages: https://doducduy20127477.github.io/G-Sneaker**  
 #### **Deploy on OnRender: https://gsneakerserver.onrender.com**  
 
 ### Completed:
