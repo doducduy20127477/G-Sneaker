@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/G-Sneaker/static/css/main.d5afbdf4.css",
+    "main.js": "/G-Sneaker/static/js/main.6dc22f9b.js",
+    "static/js/787.28cb0dcd.chunk.js": "/G-Sneaker/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/G-Sneaker/index.html",
+    "main.d5afbdf4.css.map": "/G-Sneaker/static/css/main.d5afbdf4.css.map",
+    "main.6dc22f9b.js.map": "/G-Sneaker/static/js/main.6dc22f9b.js.map",
+    "787.28cb0dcd.chunk.js.map": "/G-Sneaker/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d5afbdf4.css",
+    "static/js/main.6dc22f9b.js"
+  ]
+}
