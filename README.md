@@ -1,9 +1,9 @@
 # G-Sneaker
 
-## **Deploy on GitHub Pages: https://gsneakerserver.onrender.com](https://doducduy20127477.github.io/G-Sneaker**  
-## **Deploy on OnRender: https://gsneakerserver.onrender.com**  
+#### **Deploy on GitHub Pages: https://gsneakerserver.onrender.com](https://doducduy20127477.github.io/G-Sneaker**  
+#### **Deploy on OnRender: https://gsneakerserver.onrender.com**  
 
-## Completed:
+### Completed:
 
 -   Display all products in `Our Products` section:
     -   [x] Single product should have name, description, price, image and `Add To Cart` button.
@@ -18,12 +18,12 @@
     -   [x] Products in cart should be persistent: When user visit the application, products are added before should be showed, user don't need to add products again.
 -   Deploy the application to onrender.
 
-## Guide to run:
+### Guide to run:
 
 -   Download source code in my repo
 -   `npm install`
 -   `npm start`
   
-## Guide to run:
+### Overview:
 
 ![mainScreen](./overview/mainScreen.png) 
